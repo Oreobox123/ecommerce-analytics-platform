@@ -88,6 +88,35 @@ The source data includes **99,441 orders** and **112,650 order items**.
 
 For sales reporting, the project focuses on delivered orders.
 
+## Snowflake Data Warehouse
+
+Snowflake serves as the cloud data warehouse for this project, storing the original e-commerce datasets and the transformed analytics tables.
+
+**Warehouse architecture:**
+
+- **Database:** `ECOMMERCE_DB`
+- **Raw schema:** `RAW` — stores source datasets loaded using Python and Pandas
+- **Analytics schema:** `DBT_DEV` — stores transformed dbt models
+- **Compute warehouse:** `COMPUTE_WH`
+
+**SQL transformations in Snowflake:**
+
+The project uses dbt to execute SQL transformations directly within Snowflake. These transformations include:
+
+- Cleaning and standardizing source records
+- Joining transactional, customer, product, and seller data
+- Building dimensional and fact tables
+- Calculating monthly revenue and category performance
+- Analyzing customer purchasing behavior and geographic sales
+
+**Explore the SQL code:**
+
+- [Staging SQL Models](ecommerce_dbt/models/staging/)
+- [Analytics SQL Models](ecommerce_dbt/models/marts/)
+- [SQL Data Quality Tests](ecommerce_dbt/tests/)
+
+The dbt pipeline successfully built 16 models and passed 60 automated tests.
+
 ## Data Modeling
 
 The dbt project contains **16 models**, organized into staging and analytics layers.
