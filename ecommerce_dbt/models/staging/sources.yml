@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Original Olist e-commerce dataset loaded into Snowflake"
+    database: ECOMMERCE_DB
+    schema: RAW
+
+    tables:
+      - name: customers
+        identifier: CUSTOMERS
+        description: "Customer information"
+
+      - name: orders
+        identifier: ORDERS
+        description: "Order information and delivery timestamps"
+
+      - name: order_items
+        identifier: ORDER_ITEMS
+        description: "Products and sellers associated with orders"
+
+      - name: products
+        identifier: PRODUCTS
+        description: "Product details and characteristics"
+
+      - name: payments
+        identifier: PAYMENTS
+        description: "Payment methods and transaction values"
+
+      - name: reviews
+        identifier: REVIEWS
+        description: "Customer reviews and ratings"
+
+      - name: sellers
+        identifier: SELLERS
+        description: "Seller information"
+
+      - name: category_translation
+        identifier: CATEGORY_TRANSLATION
+        description: "Portuguese-to-English product category translations"
+
+      - name: geolocation
+        identifier: GEOLOCATION
+        description: "Geographic coordinates and ZIP code prefixes"

@@ -1,0 +1,39 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+profiles.yml
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+
+# dbt generated files
+**/target/
+**/dbt_packages/
+**/logs/
+**/.user.yml
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Tableau temporary files
+*.twbr
+
+# Original Olist datasets
+data/raw/
